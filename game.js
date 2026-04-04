@@ -1,14 +1,22 @@
 'use strict';
 
 const IMAGES = [
+  // Ritratto ufficiale 2017
   'https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg',
+  // Ritratto ufficiale 2025 (headshot)
+  'https://upload.wikimedia.org/wikipedia/commons/f/f7/Donald_Trump_official_portrait,_2025_(headshot).jpg',
+  // Ritratto ufficiale 2025 (completo)
+  'https://upload.wikimedia.org/wikipedia/commons/1/19/January_2025_Official_Presidential_Portrait_of_Donald_J._Trump.jpg',
+  // Gage Skidmore – Phoenix 2016
+  'https://upload.wikimedia.org/wikipedia/commons/a/ae/Donald_Trump_(29347022846).jpg',
+  // Arrivo a Davos 2018
+  'https://upload.wikimedia.org/wikipedia/commons/b/be/President_Trump_Arrives_in_Davos_(28111267609).jpg',
+  // Ritratto 2017 (cropped)
   'https://upload.wikimedia.org/wikipedia/commons/5/53/Donald_Trump_official_portrait_(cropped).jpg',
-  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Donald_Trump_(49580375371)_(cropped).jpg',
+  // CPAC 2017
   'https://upload.wikimedia.org/wikipedia/commons/a/ad/President_Trump_at_CPAC_2017_February_24,_2017_(cropped).jpg',
+  // Firma Tax Cuts 2017
   'https://upload.wikimedia.org/wikipedia/commons/3/36/Donald_Trump_signs_the_Tax_Cuts_and_Jobs_Act_of_2017_DSC_2269.jpg',
-  'https://upload.wikimedia.org/wikipedia/commons/b/b5/P20170303AS-0252_(33048011881).jpg',
-  'https://upload.wikimedia.org/wikipedia/commons/e/ee/Donald_Trump_by_Gage_Skidmore.jpg',
-  'https://upload.wikimedia.org/wikipedia/commons/9/96/Donald_Trump_by_Gage_Skidmore_2.jpg',
 ];
 
 // State
