@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Trump Memory">
+  <meta name="theme-color" content="#1a1a2e">
+  <title>Trump Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Trump Memory</h1>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Mosse</span>
+          <span class="stat-value" id="moves">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Tempo</span>
+          <span class="stat-value" id="timer">0:00</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Coppie</span>
+          <span class="stat-value" id="pairs">0/8</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid" id="grid"></div>
+
+    <button class="new-game-btn" id="newGameBtn">Nuova Partita</button>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div class="win-card">
+      <div class="win-emoji">🏆</div>
+      <h2>Hai vinto!</h2>
+      <p id="win-moves"></p>
+      <p id="win-time"></p>
+      <button class="new-game-btn" id="winNewGameBtn">Gioca ancora</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</body>
+</html>
