@@ -1,9 +1,9 @@
-const CACHE_NAME = 'trump-memory-v1';
+const CACHE_NAME = 'pretext-flow-v1';
 const SHELL = [
   './',
   './index.html',
   './style.css',
-  './game.js',
+  './sketch.js',
   './manifest.json',
 ];
 
@@ -25,13 +25,12 @@ self.addEventListener('activate', event => {
   self.clients.claim();
 });
 
-// Network-first for external images, cache-first for shell
+// Network-first for external (esm.sh CDN), cache-first for shell
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   const isExternal = url.origin !== self.location.origin;
 
   if (isExternal) {
-    // Cache-then-network for images
     event.respondWith(
       caches.open(CACHE_NAME).then(async cache => {
         const cached = await cache.match(event.request);
@@ -46,7 +45,6 @@ self.addEventListener('fetch', event => {
       })
     );
   } else {
-    // Cache-first for local shell
     event.respondWith(
       caches.match(event.request).then(cached => cached || fetch(event.request))
     );

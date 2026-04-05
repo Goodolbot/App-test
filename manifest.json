@@ -1,12 +1,12 @@
 {
-  "name": "Trump Memory Game",
-  "short_name": "Trump Memory",
-  "description": "Gioco delle coppie con foto di Donald Trump",
+  "name": "Pretext Flow",
+  "short_name": "Flow",
+  "description": "Testo tipografico che scorre attorno a ostacoli in movimento — esercizio estetico con pretext",
   "start_url": "./index.html",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#1a1a2e",
-  "theme_color": "#1a1a2e",
+  "orientation": "any",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
   "icons": [
     {
       "src": "icons/icon-192.png",
